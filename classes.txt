@@ -1,0 +1,4 @@
+board - instantiate the empty board, flip, check for wins, move validity
+evaluation - 3 methods returning int values of each eval
+driver - move tracker, read input, communicate to player, print
+alpha beta pruning
