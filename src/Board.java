@@ -153,7 +153,7 @@ public class Board {
 		board.flipBoard();
 		board.printBoard();
 		System.out.print("Winning board for W? " + board.isWin('W'));
-	
+
 	}
 	
 }
