@@ -1,0 +1,22 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[latin1]{inputenc}
+\author{Austin Dixon, Michael Jeandron, Jackson Nabors, Peter Salu}
+\date{September 4, 2015}
+\title{Conniption Playing Agents}
+\begin{document}
+	\maketitle
+	For our team project, we will be making an Artificial Intelligence that plays the board game Conniption. The game is similar to connect 4 where player take turns dropping chips on a 7 column 8 row board. The first player that can get 4 chips in a row horizontally, vertically, or diagonally wins. The twist is that each player gets 4 flip chips which they can use to flip the board, placing chips that were on the bottom on top and vice versa. We will be using Java as that is the language most familiar with all team members.
+	
+	We won't have a Graphical Interface as that might take up more time than is available. Our game will have the ability to play all combinations of humans and AI. The only data structure we have settled on as a team is the 2 dimensional array used to represent the board. We plan on implementing alpha/beta pruning for our tree.
+	
+	We agreed to use Github for collaboration. We will work as a team to try and come up with Evaluation Functions, as that might be the most challenging part of the project. The team members have agreed to divide up the remaining tasks as follows.
+	\begin{description}
+		\item [Austin Dixon] Evaluation functions.
+		\item[Michael Jeandron] Driver class.
+		\item[Jackson Nabors] Board class.
+		\item[Peter Salu] Alpha/Beta Pruning.
+	\end{description}
+	
+	The game will be tested manually by playing with the evaluation functions that we came up with. It will also be tested against an agent which drops chips in random columns. The evaluation functions might also be tested against each other.
+	
+\end{document}
