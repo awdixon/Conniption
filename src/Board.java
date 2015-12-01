@@ -74,8 +74,10 @@ public class Board {
 		char current[][] = getBoard();
 			for(int row = 0; row < this.spaces.length; row++)
 			{
-				if(current[row][value] != 'O')
+				if(current[row][value] != 'O'){
 				valid = true;
+				break;
+			}
 			}
 			return valid; 
 	}
@@ -84,14 +86,26 @@ public class Board {
 		char current[][] = this.spaces;
 		if(isValid(value)){
 			for(int row = this.spaces.length -1 ; row >0; row--){
-				if(current[row][value] == '0')
+				if(current[row][value] == 'O'){
 					
 						current[row][value] = piece;
+						break;
+				}
 					
 			}
 		}
 			moves++;
 			this.spaces = current;
+	}
+	
+	public void undoMove(int col){
+		char current[][] = this.spaces;
+		for(int row = 0; row < 0; row++){
+			if(current[row][col] != 'O'){
+				current[row][col] = 'O';
+				break;
+			}
+		}
 	}
 	
 	public boolean isWin(char value){		// checks up down, side to side, then diagonals
@@ -147,14 +161,7 @@ public class Board {
 		}
 	}
 	
-	public static void main (String[] args){ // tests a few methods. 
-		Board board = new Board();
-		System.out.println("Board length:" + board.spaces.length);
-		board.flipBoard();
-		board.printBoard();
-		System.out.print("Winning board for W? " + board.isWin('W'));
-
-	}
+	
 	
 }
 
