@@ -12,9 +12,8 @@ public class Board {
 			  { 'O', 'O', 'O', 'O', 'O', 'O', 'O'},
 			  { 'O', 'O', 'O', 'O', 'O', 'O', 'O'},
 			  { 'O', 'O', 'O', 'O', 'O', 'O', 'O'},
-			  { 'O', 'O', 'O', 'O', 'O', 'O', 'O'},
-			  { 'O', 'O', 'O', 'O', 'O', 'O', 'O'},
 			  { 'O', 'O', 'O', 'O', 'O', 'O', 'O'}
+			  
 			};
 	
 	public int getMoves() { // return number of moves, ex. could print "game won in # moves at end"
@@ -26,7 +25,7 @@ public class Board {
 	}
 
 	public Board flipBoard(){  // makes mirror image of board
-		char flip[][] = new char[8][8];
+		char flip[][] = new char[6][7];
 		for(int row = 0; row < this.spaces.length; row++)
 			for(int col = 0; col < this.spaces[row].length; col++)
 			{
@@ -74,7 +73,7 @@ public class Board {
 		char current[][] = getBoard();
 			for(int row = 0; row < this.spaces.length; row++)
 			{
-				if(current[row][value] != 'O'){
+				if(current[row][value] == 'O'){
 				valid = true;
 				break;
 			}
