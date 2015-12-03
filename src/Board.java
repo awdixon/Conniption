@@ -69,6 +69,7 @@ public class Board {
 	}
 	
 	public boolean isValid(int value){ // checks if row isn't full 
+<<<<<<< HEAD
 		boolean valid = false; 
 		char current[][] = getBoard();
 			for(int row = 0; row < this.spaces.length; row++)
@@ -79,6 +80,9 @@ public class Board {
 			}
 			}
 			return valid; 
+=======
+		return this.spaces[value][this.spaces[value].length - 1] == 'O';
+>>>>>>> bfc796c38566ed452c5aff5f4b655e5b045ecc68
 	}
 	
 	public void makeMove(int value, char piece){			// makemove ( column number, 'R' or 'W')
