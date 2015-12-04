@@ -133,7 +133,7 @@ public class Board {
 			
 			
 			}
-		for(int col = 0; col < this.spaces[0].length; col++)
+		for(int col = 0; col < this.spaces[0].length -3 ; col++)
 			for(int row = this.spaces.length -1 ; row >0; row--){
 				if(row <=2)
 				{
