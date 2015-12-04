@@ -135,7 +135,7 @@ public class Board {
 			}
 		for(int col = 0; col < this.spaces[0].length; col++)
 			for(int row = this.spaces.length -1 ; row >0; row--){
-				if(row <=4)
+				if(row <=2)
 				{
 				if(current[row][col] == value && current[row+1][col+1] == value && current[row+2][col+2] == value && current[row+3][col+3] == value){
 					win = true;
