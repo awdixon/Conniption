@@ -7,16 +7,16 @@ import java.util.Vector;
  */
 
 public class AlphaBetaPruning {
-    Vector<Board> childrenOf(Board initial, char player) {
-        Board current = initial;
-        Vector<Board> children = new Vector<>();
+	Vector<Board> childrenOf(Board initial, char player) {
+		Board current = initial;
+		Vector<Board> children = new Vector<>();
 
-        for (int column = 0; column < current.spaces.length; column++) {
-            current.makeMove(column, player);
-            children.add(current);
-//            current.undoMove(column);
-        }
+		for (int column = 0; column < current.spaces.length; column++) {
+			current.makeMove(column, player);
+			children.add(current);
+			current.undoMove(column);
+		}
 
-        return children;
-    }
+		return children;
+	}
 }
