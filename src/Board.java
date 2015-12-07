@@ -91,7 +91,7 @@ public class Board {
 	
 	public void undoMove(int col){
 		char current[][] = this.spaces;
-		for(int row = 0; row < this.spaces.length-1; row++){
+		for(int row = 0; row < this.spaces.length; row++){
 			if(current[row][col] != 'O'){
 				current[row][col] = 'O';
 				break;
