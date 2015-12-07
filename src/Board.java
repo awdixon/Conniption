@@ -105,7 +105,7 @@ public class Board {
 		for(int row = 0; row < current.length; row++)
 			for(int col = 0; col < current[row].length; col++)
 			{
-				if(row <= 4){
+				if(row <= 2){
 				if(current[row][col] == value && current[row+1][col] == value && current[row+2][col] == value && current[row+3][col] == value){
 					win = true;
 					break;}
