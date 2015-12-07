@@ -15,8 +15,8 @@ public class Evaluation {
 		int utility = 128;
 		int sum = 0;
 
-		for (int i = 0; i < rows; i++) {
-			for (int j = 0; j <columns; j++) {
+		for (int i = 0; i < board.length; i++) {
+			for (int j = 0; j < board[i].length; j++) {
 				if (board[i][j] == 'R')
 					sum += evaluationTable[i][j];
 
