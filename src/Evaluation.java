@@ -10,7 +10,7 @@ public class Evaluation {
 												{4, 6, 8, 10, 8, 6, 4},
 												{3, 4, 5, 7, 5, 4, 3}};
 
-	public int evaluate() {
+	public int evaluate(char[][] board) {
 
 		int utility = 128;
 		int sum = 0;
@@ -23,8 +23,8 @@ public class Evaluation {
 				else if (board[i][j] == 'W')
 					sum -= evaluationTable[i][j];
 
-				return utility + sum;
 			}
 		}
+		return utility + sum;
 	}
 }
