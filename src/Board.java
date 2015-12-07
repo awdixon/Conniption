@@ -3,7 +3,8 @@
 
 
 public class Board {
-	
+	public char RED = 'R';
+	public char WHITE = 'W';
 	int moves;  // number of moves, could be moved to driver class
 	int count = 0; //keeps count in move down function to run the number of times the board is tall to move all pieces down after a flip. 
 	char[][] spaces = new char[][]{							// array of O's for empty spaces, use R & W for red and white players
