@@ -11,7 +11,6 @@ public class Evaluation {
 												{4, 6, 8, 10, 8, 6, 4},
 												{3, 4, 5, 7, 5, 4, 3}};
 
-<<<<<<< HEAD
 	Board board = new Board();
 	char[][] spaces = board.getBoard();
 	String flip;
