@@ -69,22 +69,14 @@ public class Board {
 		
 	}
 	
-<<<<<<< HEAD
 	public boolean isValid(int value){ // checks if row isn't full 
-=======
-	public boolean isValid(int value){ // checks if column isn't full 
->>>>>>> 14471a6c0fe09af7d431bf670d0d58681bf73509
 		return this.spaces[0][value] == 'O';
 	}
 	
 	public void makeMove(int value, char piece){			// makemove ( column number, 'R' or 'W')
 		char current[][] = this.spaces;
 		if(isValid(value)){
-<<<<<<< HEAD
-			for(int row = this.spaces.length - 1; row >= 0; row--){
-=======
 			for(int row = this.spaces.length -1 ; row >=0; row--){
->>>>>>> 14471a6c0fe09af7d431bf670d0d58681bf73509
 				if(current[row][value] == 'O'){
 					
 						current[row][value] = piece;
