@@ -49,20 +49,20 @@ public class Evaluation {
 	}
 
 
-	// public int evaluate() {
+	public int evaluate(char[][] board) {
 
-	//     int utility = 128;
-	//     int sum = 0;
+	     int utility = 128;
+	     int sum = 0;
 
-	//     for (int i = 0; i < rows; i++)
-	//         for (int j = 0; j <columns; j++)
-	//             if (board[i][j] == 'R')
-	//                 sum += evaluationTable[i][j];
+	     for (int i = 0; i < board.length; i++)
+	         for (int j = 0; j < board[i].length; j++)
+	             if (board[i][j] == 'R')
+	                 sum += evaluationTable[i][j];
 
-	//             else if (board[i][j] == 'W')
-	//                 sum -= evaluationTable[i][j];
+	             else if (board[i][j] == 'W')
+	                 sum -= evaluationTable[i][j];
 
-	//     return utility + sum;
- //    }
+	     return utility + sum;
+	 }
 }
 
