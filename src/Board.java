@@ -3,7 +3,8 @@
 
 
 public class Board {
-	
+	public char RED = 'R';
+	public char WHITE = 'W';
 	int moves;  // number of moves, could be moved to driver class
 	int count = 0; //keeps count in move down function to run the number of times the board is tall to move all pieces down after a flip. 
 	char[][] spaces = new char[][]{							// array of O's for empty spaces, use R & W for red and white players
@@ -68,14 +69,22 @@ public class Board {
 		
 	}
 	
+<<<<<<< HEAD
 	public boolean isValid(int value){ // checks if row isn't full 
+=======
+	public boolean isValid(int value){ // checks if column isn't full 
+>>>>>>> 14471a6c0fe09af7d431bf670d0d58681bf73509
 		return this.spaces[0][value] == 'O';
 	}
 	
 	public void makeMove(int value, char piece){			// makemove ( column number, 'R' or 'W')
 		char current[][] = this.spaces;
 		if(isValid(value)){
+<<<<<<< HEAD
 			for(int row = this.spaces.length - 1; row >= 0; row--){
+=======
+			for(int row = this.spaces.length -1 ; row >=0; row--){
+>>>>>>> 14471a6c0fe09af7d431bf670d0d58681bf73509
 				if(current[row][value] == 'O'){
 					
 						current[row][value] = piece;
@@ -90,7 +99,7 @@ public class Board {
 	
 	public void undoMove(int col){
 		char current[][] = this.spaces;
-		for(int row = 0; row < this.spaces.length-1; row++){
+		for(int row = 0; row < this.spaces.length; row++){
 			if(current[row][col] != 'O'){
 				current[row][col] = 'O';
 				break;
@@ -105,7 +114,7 @@ public class Board {
 		for(int row = 0; row < current.length; row++)
 			for(int col = 0; col < current[row].length; col++)
 			{
-				if(row <= 4){
+				if(row <= 2){
 				if(current[row][col] == value && current[row+1][col] == value && current[row+2][col] == value && current[row+3][col] == value){
 					win = true;
 					break;}

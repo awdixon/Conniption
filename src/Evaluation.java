@@ -11,9 +11,13 @@ public class Evaluation {
 												{4, 6, 8, 10, 8, 6, 4},
 												{3, 4, 5, 7, 5, 4, 3}};
 
+<<<<<<< HEAD
 	Board board = new Board();
 	char[][] spaces = board.getBoard();
 	String flip;
+=======
+	public int evaluate(char[][] board) {
+>>>>>>> 14471a6c0fe09af7d431bf670d0d58681bf73509
 
 	// public int evalTypeF(int num){
 	// 	if (num == 1)
@@ -24,6 +28,7 @@ public class Evaluation {
 	// 	return 0;
 	// }
 
+<<<<<<< HEAD
 	// public int evalTypeC(int num) {
 	// 	if (num == 1)
 	// 		this.randColumn();
@@ -32,9 +37,16 @@ public class Evaluation {
 	// 	}
 	// 	return 0;
 	//}
+=======
+		for (int i = 0; i < board.length; i++) {
+			for (int j = 0; j < board[i].length; j++) {
+				if (board[i][j] == 'R')
+					sum += evaluationTable[i][j];
+>>>>>>> 14471a6c0fe09af7d431bf670d0d58681bf73509
 
 	public int randFlip() {
 
+<<<<<<< HEAD
 		Random rand = new Random();
 		int num = rand.nextInt(500) % 2;
 
@@ -65,3 +77,10 @@ public class Evaluation {
 	//     return utility + sum;
  //    }
 }
+=======
+			}
+		}
+		return utility + sum;
+	}
+}
+>>>>>>> 14471a6c0fe09af7d431bf670d0d58681bf73509
