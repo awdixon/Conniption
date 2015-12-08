@@ -3,6 +3,7 @@
 
 import java.util.Scanner;
 import java.util.Random;
+import java.lang.Math;
 
 public class Driver {
 	public static void main(String Args[]) {
