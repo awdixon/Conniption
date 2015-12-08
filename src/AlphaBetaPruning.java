@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.function.Function;
+import java.util.Vector;
 
 /**
  * Programmer: Peter Salu
@@ -100,6 +101,18 @@ public class AlphaBetaPruning {
 			if (board.isValid(column)) {
 				children.add(column);
 			}
+		}
+
+		return children;
+	}
+	Vector<Board> childrenOf(Board initial, char player) {
+		Board current = initial;
+		Vector<Board> children = new Vector<>();
+
+		for (int column = 0; column < current.spaces.length; column++) {
+			current.makeMove(column, player);
+			children.add(current);
+			current.undoMove(column);
 		}
 
 		return children;
